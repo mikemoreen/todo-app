@@ -1,0 +1,5 @@
+1) При нажатии на Add Task добавлять одну карточку в контайнер
+https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867 - гайд по redux
+https://alexkondov.com/tao-of-react/#component-length - Tao of react
+https://github.com/jaredpalmer/formik/blob/master/packages/formik/src/Form.tsx  -Formik
+https://marko-knoebl.github.io/slides/index-en.html - материалы по разным технологиям
