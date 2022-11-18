@@ -1,17 +1,21 @@
 import React, {useState} from 'react';
 
+
+// Components
+import Cards from './components/Cards';
+
 const testCard = {
   id:1,
   content: 'Hello'
 }
-type Card = {
+export type CardType = {
   id: number,
   content: string
 }
-function App() {
+const App:React.FC = () =>{
   // const cardsArray: Card[] = []
   // const [cards, setCards] = useState(cardsArray);
-  const [cards, setCards] = useState<Card[]>([]);
+  const [cards, setCards] = useState<CardType[]>([]);
   return (
     <div className="flex flex-col items-center justify-center">
     
@@ -31,20 +35,8 @@ function App() {
           <div className="flex-grow border-t border-gray-400"></div>
       </div>
       {/*Список карточек*/}
-      <div className="flex items-center justify-center w-[70rem] space-x-4 mt-6 h-auto flex-wrap">
-        <div className='bg-neutral-300 h-48 w-48 py-5'>1</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>2</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>3</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>1</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>2</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>3</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>1</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>2</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>3</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>1</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>2</div>
-        <div className='bg-neutral-300 h-48 w-48 py-5'>3</div>
-      </div>
+      <Cards cards = {cards}/>
+
     </div>
   );
 }
