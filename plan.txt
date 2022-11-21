@@ -6,4 +6,4 @@ https://marko-knoebl.github.io/slides/index-en.html - материалы по р
 https://worldbuilding.stackexchange.com/questions/238183/how-difficult-would-it-be-to-reverse-engineer-a-device-whose-function-is-based-o
 https://levelup.gitconnected.com/9-projects-you-can-do-to-become-a-front-end-master-in-2023-a4389153148c
 
-2) 
+2) По клику на add Task открывать новую страницу с формой

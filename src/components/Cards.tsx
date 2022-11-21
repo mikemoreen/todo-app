@@ -1,5 +1,5 @@
 import Card from './Card'
-import { CardType } from '../App'
+import {CardType} from '../pages/HomePage'
 
 interface CardsProps {
     cards?: CardType[]

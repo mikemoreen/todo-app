@@ -1,4 +1,5 @@
-import { CardType } from '../App'
+import {CardType} from '../pages/HomePage'
+
 interface CardProps {
     card?: CardType
 }
