@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Textarea } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 
+import { Context } from '../App';
+
 const CardForm: React.FC = () =>{
+    const {value, handleValue} = useContext(Context) 
+
     const navigate = useNavigate();
     const [title, setTitle] = useState('')
     const [comments, setComments] = useState('');
@@ -35,10 +39,10 @@ const CardForm: React.FC = () =>{
             <div>
                 <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border 
                     border-gray-400 rounded shadow"
-                    onClick={()=>navigate("/", {
-                        state: {title, comments},
-                        replace: false,
-                      })}
+                    onClick={()=>{
+                      handleValue(title)
+                      navigate("/")
+                    }}
                     >
                     Create
                 </button>

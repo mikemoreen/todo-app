@@ -1,6 +1,9 @@
 import CardForm from "../components/CardForm";
+// interface AddCardProps {
+//     handleValue?: React.Dispatch<React.SetStateAction<string[]>>
+// }
 
-const AddCardForm: React.FC = () =>{
+const AddCardForm = () =>{
     
     return (
         <div className="flex  justify-center items-center">

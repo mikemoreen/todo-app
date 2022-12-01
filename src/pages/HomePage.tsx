@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
-
+import { Context } from '../App';
 // Components
 import Cards from '../components/Cards';
 
@@ -13,8 +13,10 @@ export type CardType = {
   content: string
 }
 const Home:React.FC = () =>{
-  const location = useLocation();
-  console.log(location.state) 
+  // const location = useLocation();
+  // console.log(location.state)
+  const {value, handleValue} = useContext(Context) 
+  console.log('value in HomePage',value)
   const navigate = useNavigate();
   const [cards, setCards] = useState<CardType[]>([]);
   return (
