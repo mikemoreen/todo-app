@@ -2,10 +2,12 @@ import { useState, useContext } from "react";
 import { Textarea } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 
-import { Context } from '../App';
+import { TasksContext } from '../App';
 
-const CardForm: React.FC = () =>{
-    const {value, handleValue} = useContext(Context) 
+import uniqid from 'uniqid';
+
+const TaskForm: React.FC = () =>{
+    const {tasks, addTask} = useContext(TasksContext) 
 
     const navigate = useNavigate();
     const [title, setTitle] = useState('')
@@ -21,10 +23,6 @@ const CardForm: React.FC = () =>{
           <div className="w-96">
 
             <input type="text" value={title} className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                invalid:border-pink-500 invalid:text-pink-600
-                focus:invalid:border-pink-500 focus:invalid:ring-pink-500
             " onChange={e => setTitle(e.target.value)} placeholder="title"/>
           </div>
           <div className="w-96">
@@ -40,11 +38,12 @@ const CardForm: React.FC = () =>{
                 <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border 
                     border-gray-400 rounded shadow"
                     onClick={()=>{
-                      handleValue(title)
+                      const id = uniqid()
+                      addTask({title, comments, id})
                       navigate("/")
                     }}
                     >
-                    Create
+                    Save
                 </button>
             </div>
             <div>
@@ -60,4 +59,4 @@ const CardForm: React.FC = () =>{
     </div>
     )
 }
-export default CardForm;
+export default TaskForm;

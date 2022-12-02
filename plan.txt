@@ -1,9 +1,21 @@
 1) При нажатии на Add Task добавлять одну карточку в контайнер
 https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867 - гайд по redux
 https://alexkondov.com/tao-of-react/#component-length - Tao of react
-https://github.com/jaredpalmer/formik/blob/master/packages/formik/src/Form.tsx  -Formik
+https://github.com/jaredpalmer/formik/blob/master/packages/formik/src/Form.tsx  - Formik
 https://marko-knoebl.github.io/slides/index-en.html - материалы по разным технологиям
 https://worldbuilding.stackexchange.com/questions/238183/how-difficult-would-it-be-to-reverse-engineer-a-device-whose-function-is-based-o
 https://levelup.gitconnected.com/9-projects-you-can-do-to-become-a-front-end-master-in-2023-a4389153148c
 
 2) По клику на add Task открывать новую страницу с формой
+
+
+Главная страница содержит заголовок "Todo List" с кнопкой добавления нового элемента списка и список карточек под ними.
+ 
+Каждая карточка имеет заголовок, иконку удаления и чекбокс, отвечающий за выполнение. В зависимости от состояния чекбокса 
+стили карточки должны изменяться (например, выполненные задачки становятся серыми, на твоё усмотрение)
+
+При создании карточки открывается страница с формой. Поля: заголовок, комментарий. И кнопки "Сохранить" и "Назад". 
+Id генерируется за кадром (можно число, но лучше uuid — нужно установить библиотеку)
+
+При клике на карточку открывается отдельная страница по новому пути, содержащему id карточки, на которой отображается заголовок и 
+комментарий по данной задаче и кнопка "Назад"

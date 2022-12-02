@@ -1,24 +1,15 @@
 import React, {useState, useContext} from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
-import { Context } from '../App';
+import { TasksContext } from '../App';
 // Components
-import Cards from '../components/Cards';
+import Tasks from '../components/Tasks';
 
-const testCard = {
-  id:1,
-  content: 'Hello'
-}
-export type CardType = {
-  id: number,
-  content: string
-}
-const Home:React.FC = () =>{
-  // const location = useLocation();
-  // console.log(location.state)
-  const {value, handleValue} = useContext(Context) 
-  console.log('value in HomePage',value)
+
+
+const TasksPage:React.FC = () =>{
+  // const {tasks, addTask} = useContext(TasksContext) 
+  // console.log('tasks in HomePage',tasks)
   const navigate = useNavigate();
-  const [cards, setCards] = useState<CardType[]>([]);
   return (
     <div className="flex flex-col items-center justify-center">
     
@@ -38,9 +29,9 @@ const Home:React.FC = () =>{
           <div className="flex-grow border-t border-gray-400"></div>
       </div>
       {/*Список карточек*/}
-      <Cards cards = {cards}/>
+      <Tasks />
     </div>
   );
 }
 
-export default Home;
+export default TasksPage;
