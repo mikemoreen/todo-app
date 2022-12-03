@@ -2,10 +2,6 @@
     stroke: #111827;
   }
   
-  .icon:hover {
-    stroke: #EF4444;
-  }
-.label-size{
-  width: 20px;
-  height: 20px;
+.icon:hover {
+  stroke: #EF4444;
 }
