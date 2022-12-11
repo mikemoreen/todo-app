@@ -30,7 +30,6 @@ export const TasksContext = createContext<Tasks>({
 });
 
 const App: React.FC = () => {
-  console.log('hi')
   const [tasks, setNewTask] = useState<TaskType[]>([]);
 
   const addTask = (task: TaskType) => {
